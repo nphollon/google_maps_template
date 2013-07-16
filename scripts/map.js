@@ -4,13 +4,10 @@ var DEFAULT_MAP_OPTIONS = {
     mapTypeId: google.maps.MapTypeId.SATELLITE
 };
 
-function renderMap() {
-    return new google.maps.Map(
-        $('#map-canvas').get(0),
-        DEFAULT_MAP_OPTIONS
-    );
+function renderMap(mapCanvas) {
+    return new google.maps.Map(mapCanvas, DEFAULT_MAP_OPTIONS);
 }
 
 $(document).ready(function() {
-    renderMap();
+    renderMap($('#map-canvas').get(0));
 });
