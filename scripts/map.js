@@ -1,3 +1,4 @@
+var CANVAS_ID = "map-canvas";
 var DEFAULT_MAP_OPTIONS = {
     center: new google.maps.LatLng(40, -99), // Center of US
     zoom: 4,
@@ -9,5 +10,6 @@ function renderMap(mapCanvas) {
 }
 
 $(document).ready(function() {
-    renderMap($('#map-canvas').get(0));
+    var canvasElement = $('#'+CANVAS_ID).get(0);
+    renderMap(canvasElement);
 });
